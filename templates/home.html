@@ -1,0 +1,12 @@
+{% extends 'bootstrap_base.html' %}
+
+{% block main_content %}
+    <div class="col-md-6" ng-controller="WithFileCtrl">
+        <table class="table table-striped">
+            <tr ng-repeat="odds in datasource">
+                <td>{$ odds.market $}</td>
+                <td>{$ odds.odds $}</td>
+            </tr>
+        </table>
+    </div>
+{% endblock main_content %}
