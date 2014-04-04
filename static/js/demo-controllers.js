@@ -14,7 +14,6 @@ DemoControllers.controller('DemoCtrl', ['$scope', 'dataService', function($scope
     });
 
     $scope.$on('handleChannelMessage', function(e, channels, message) {
-        console.log(message);
         if (indexOf.call(channels, $scope.channel) > -1) {
             this.dataMapper.mapData($scope.datasource, message);
             $scope.$apply();
